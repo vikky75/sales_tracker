@@ -5,19 +5,23 @@
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <title></title>
+
+      <link rel="stylesheet" href=
+"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
       <meta name="description" content="">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="">
+      <link rel="stylesheet" href="login.css">
    </head>
    <body>
       <?php
       include "connection.php";
       ?>
-
+      <div class="update">Hi, please enter your updates</div><br>
+      <div class="container-fluid">
       <form action="entry.php" method="post">
-         <div>
+         <div class="first">
          <label>Emp_Name:</label>
-         <select name="emp">
+         <select name="emp" class="first">
             <option>Select</option>
             <option>Name1</option>
             <option>Name2</option>
@@ -35,7 +39,8 @@
          </select>
          </div>
          <br>
-         <div>
+
+         <div class="second">
          <label >Customer:</label>
          <input type="text" name="cust">
         <label name=""> Who visited:</label>
@@ -55,14 +60,16 @@
          </select>
          </div>
          <br>
-         <div>
+
+         <div class="third">
          <label>Cus_Name:</label>
          <input type="text" name="custname">
          <label>Position:</label>
          <input type="text" name="position">
          </div>
          <br>
-         <div>
+
+         <div classs="fourth">
          <label>Contact No:</label>
          <input type="text" name="contact">
          <label>Payment mode:</label>
@@ -74,12 +81,14 @@
          </select>
          </div>
          <br>
-         <div>
+
+         <div class="fifth">
          <label>Remarks:</label>
          <input type="text" name="remark">
          </div>
          <br>
-         <div>
+
+         <div class="sixth">
          <label>Date:</label> 
          <input type="date" name="dat" value="" min="2021-01-01" max="2025-12-31">
          <label>Next Appointment:</label> 
@@ -95,8 +104,8 @@
          </select> 
          </div> 
          <br>
-         <input type="submit" name="submit" value="submit">                                                      
+         <input type="submit" name="submit" value="submit" id="sub">                                                      
          </form>
-   
+         </div>
    </body>
 </html>
