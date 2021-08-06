@@ -1,6 +1,24 @@
 <?php
   
-include_once('connection.php');
+  $conn = "";
+   
+  try {
+      $servername = "localhost:3306";
+      $dbname = "admin";
+      $username = "root";
+      $password = "";
+     
+      $conn = new PDO(
+          "mysql:host=$servername; dbname=admin",
+          $username, $password
+      );
+        
+     $conn->setAttribute(PDO::ATTR_ERRMODE,
+                      PDO::ERRMODE_EXCEPTION);
+  }
+  catch(PDOException $e) {
+      echo "Connection failed: " . $e->getMessage();
+  };
    
 function test_input($data) {
       
@@ -12,9 +30,9 @@ function test_input($data) {
    
 if ($_SERVER["REQUEST_METHOD"]== "POST") {
       
-    $adminname = test_input($_POST["adminname"]);
+    $adminname = test_input($_POST["username"]);
     $password = test_input($_POST["password"]);
-    $stmt = $conn->prepare("SELECT * FROM adminlogin");
+    $stmt = $conn->prepare("SELECT * FROM name");
     $stmt->execute();
     $users = $stmt->fetchAll();
       
