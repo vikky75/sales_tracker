@@ -1,3 +1,9 @@
+<html>
+<head>
+
+<link rel="stylesheet" href="login.css">
+
+
 <?php
 $servername = "localhost";
 $username = "root";
@@ -42,3 +48,9 @@ if (mysqli_query($conn, $sql)) {
 mysqli_close($conn);
 }
 ?>
+<form action="input.php" method="POST">
+<input type="submit" value="Go back" class="back"><br>
+</form>
+
+</body>
+</html>
