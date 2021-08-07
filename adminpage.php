@@ -22,7 +22,8 @@ function showUser(str) {
 </head>
 <body>
   <div class="container">
-  <div class="heading"><h2>Hi Admin welcome back<h2></div>
+  <div class="heading"><h3> DASHBOARD<h3></div>
+  
   <div class="nam">
     <form>
       <select name="users"  onchange="showUser(this.value)">
